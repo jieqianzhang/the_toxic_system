@@ -1,251 +1,49 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kidney Project | </title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+      
+    <link rel="canonical" href="">
+    <meta property="fb:app_id" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:locale" content="en_US">
+    <meta property="og:url" content="" />
+    <meta property="og:title" content="" /> 
+    <meta property="og:image" content="" /> 
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="264" />
+    <meta property="og:image:height" content="400" />
+    <meta property="og:description" content="" /> 
 
-	<title>HeartBeat</title>
-	<script src="//d3js.org/d3.v3.min.js"></script>
+    <meta name="twitter:card" content="">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="">
+    <meta name="twitter:image:width" content="" />
+    <meta name="twitter:image:height" content="" />
+    
 
-	<style>
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    
+    
+      
+      
+      
 
-		body{
-			background-color: #eee;
-		}
-
-		#svg-wrapper {
-			width: 100%;
-			height: 650px;
-			margin: auto;
-		}
-
-		svg path {
-			fill: none;
-			stroke: darkred;
-			stroke-width: 2px;
-		}
-
-		svg .axis {
-			font-size: 12px;
-		}
-
-		svg .axis path {
-			display: none;
-		}
-
-	</style>
-
-	<script type="text/javascript">
-
-		window.onload = function() {
-
-			var svg = null;
-			var circle = null;
-			var circleTransition = null;
-			var latestBeat = null;
-			var insideBeat = false;
-			var data = [];
-
-			var SECONDS_SAMPLE = 5;
-			var BEAT_TIME = 400;
-			var TICK_FREQUENCY = SECONDS_SAMPLE * 1000 / BEAT_TIME;
-			var BEAT_VALUES = [0, 0, 5, -7, 15, -12, 5, 0, 0];
-
-			var CIRCLE_FULL_RADIUS = 20;
-			var MAX_LATENCY = 5000;
-
-			var colorScale = d3.scale.linear()
-					.domain([BEAT_TIME, (MAX_LATENCY - BEAT_TIME) / 2, MAX_LATENCY])
-					// .range(["#6D9521", "#D77900", "#CD3333"]);
-					.range(["darkred","#ea7588"])
-
-			var radiusScale = d3.scale.linear()
-					.range([5, CIRCLE_FULL_RADIUS])
-					.domain([MAX_LATENCY, BEAT_TIME]);
-
-			function beat() {
-
-				if (insideBeat) return;
-				insideBeat = true;
-
-				var now = new Date();
-				var nowTime = now.getTime();
-
-				if (data.length > 0 && data[data.length - 1].date > now) {
-					data.splice(data.length - 1, 1);
-				}
-
-				data.push({
-					date: now,
-					value: 0
-				});
-
-				var step = BEAT_TIME / BEAT_VALUES.length - 2;
-				for (var i = 1; i < BEAT_VALUES.length; i++) {
-					data.push({
-						date: new Date(nowTime + i * step),
-						value: BEAT_VALUES[i]
-					});
-				}
-
-				latestBeat = now;
-
-				circleTransition = circle.transition()
-						.duration(BEAT_TIME)
-						.attr("r", CIRCLE_FULL_RADIUS)
-						.attr("fill", "darkred");
-
-				setTimeout(function() {
-					insideBeat = false;
-				}, BEAT_TIME);
-			}
-
-			var svgWrapper = document.getElementById("svg-wrapper");
-			var margin = {left: 10, top: 10, right: CIRCLE_FULL_RADIUS * 3, bottom: 10},
-					width = svgWrapper.offsetWidth - margin.left - margin.right,
-					height = svgWrapper.offsetHeight - margin.top - margin.bottom;
-
-			// create SVG
-			svg = d3.select('#svg-wrapper').append("svg")
-					.attr("width", width + margin.left + margin.right)
-					.attr("height", height + margin.bottom + margin.top)
-					.append("g")
-						.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-			circle = svg
-					.append("circle")
-					.attr("fill", "darkred")
-					.attr("cx", width + margin.right / 2)
-					.attr("cy", height / 2)
-					.attr("r", CIRCLE_FULL_RADIUS);
-
-			// init scales
-			var now = new Date(),
-					fromDate = new Date(now.getTime() - SECONDS_SAMPLE * 1000);
-
-			// create initial set of data
-			data.push({
-				date: now,
-				value: 0
-			});
-
-			var x = d3.time.scale()
-					.domain([fromDate, new Date(now.getTime())])
-					.range([0, width]),
-					y = d3.scale.linear()
-							.domain([-10, 10])
-							.range([height, 0]);
-
-			var line = d3.svg.line()
-					.interpolate("basis")
-					.x(function(d) {
-						return x(d.date);
-					})
-					.y(function(d) {
-						return y(d.value);
-					});
-
-			var xAxis = d3.svg.axis()
-					.scale(x)
-					.orient("bottom");
-					// .ticks(d3.time.seconds, 1)
-					// .tickFormat(function(d) {
-					// 	var seconds = d.getSeconds() === 0 ? "00" : d.getSeconds();
-					// 	return seconds % 10 === 0 ? d.getMinutes() + ":" + seconds : ":" + seconds;
-					// });
-
-			// add clipPath
-			svg.append("defs").append("clipPath")
-					.attr("id", "clip")
-					.append("rect")
-					.attr("width", width)
-					.attr("height", height);
-
-			var axis = d3.select("svg").append("g")
-					.attr("class", "axis")
-					.attr("transform", "translate(0," + height + ")")
-					.call(xAxis);
-
-			var path = svg.append("g")
-					.attr("clip-path", "url(#clip)")
-					.append("path")
-					.attr("class", "line");
-
-			svg.select(".line")
-					.attr("d", line(data));
-
-			var transition = d3.select("path").transition()
-					.duration(100)
-					.ease("linear");
-
-			(function tick() {
-
-				transition = transition.each(function() {
-
-					// update the domains
-					now = new Date();
-					fromDate = new Date(now.getTime() - SECONDS_SAMPLE * 1000);
-					x.domain([fromDate, new Date(now.getTime() - 100)]);
-
-					var translateTo = x(new Date(fromDate.getTime()) - 100);
-
-					// redraw the line
-					svg.select(".line")
-							.attr("d", line(data))
-							.attr("transform", null)
-							.transition()
-							.attr("transform", "translate(" + translateTo + ")");
-
-					// slide the x-axis left
-					axis.call(xAxis);
-
-				}).transition().each("start", tick);
-			})();
-
-			setInterval(function() {
-
-				now = new Date();
-				fromDate = new Date(now.getTime() - SECONDS_SAMPLE * 1000);
-
-				for (var i = 0; i < data.length; i++) {
-					if (data[i].date < fromDate) {
-						data.shift();
-					} else {
-						break;
-					}
-				}
-
-				if (insideBeat) return;
-
-				data.push({
-					date: now,
-					value: 0
-				});
-
-				if (circleTransition != null) {
-
-					var diff = now.getTime() - latestBeat.getTime();
-
-					if (diff < MAX_LATENCY) {
-						circleTransition = circle.transition()
-								.duration(TICK_FREQUENCY)
-								.attr("r", radiusScale(diff))
-								.attr("fill", colorScale(diff));
-					}
-				}
-
-
-			}, TICK_FREQUENCY);
-
-			setInterval(function() {
-				beat();
-			}, 3000);
-			beat();
-		};
-
-	</script>
-
-<body>
-
-	<div id="svg-wrapper"></div>
-
-</body>
+    
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/d3.v3.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>
