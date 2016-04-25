@@ -1,0 +1,261 @@
+body{
+    font-family: 'Rokkitt', serif;
+    overflow-x: hidden;
+}
+
+.landing_page{
+    height:100vh;
+    overflow: hidden;
+    position: relative;
+    z-index: 9;
+}
+
+/*
+header{
+    overflow: hidden;
+    position: relative;
+    z-index: 9;
+}
+*/
+
+#intro_page{
+    position: relative;
+    z-index: 10;
+    background-color: #efefef;
+}
+
+.intro{
+    background: #efefef;
+    position: relative;
+    z-index: 99;
+    text-align: center;
+}
+
+
+#pillbox1, #pillbox2{
+    position: absolute;
+    z-index: 199;
+
+}
+
+.language{
+    position: absolute;
+    top:10px;
+    left:20px;
+    font-size:16px;
+
+}
+
+.spanish{
+    text-decoration: none;
+    color:darkgrey;
+}
+
+a.spanish:hover{
+    color:darkred;
+    text-decoration: none;
+    
+}
+
+/*
+.spanish{
+    position:absolute;
+    left:50%;
+    top:55%;
+    transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+    z-index: 1;
+    background-color: #efefef;
+    border:solid 1px darkgrey;
+}
+*/
+
+
+
+@media only screen and (max-width:768px){
+
+    .title{
+        width:100%;
+    }
+    
+    .intro{
+        width:90%;
+    }
+    
+    #pillbox1{
+        width:60%;
+        top:0;
+    }
+    
+    #pillbox2{
+        width:50%;
+        bottom:0px;
+    }
+    
+    
+
+    
+  
+
+}
+
+@media only screen and (min-width:769px){
+    
+    .title{
+        width:50%;
+    }
+    
+    #pillbox1{
+        width:30%;
+        top:30%;  
+    }
+    
+    #pillbox2{
+        width:30%;
+        bottom:0px;  
+    }
+    
+    .teaser{
+        height:50%;
+    
+    }
+    
+
+}
+
+
+
+.title{
+
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+    z-index: 1;
+
+}
+
+.line {
+    position:absolute;
+    left:50%;
+    top:146%;
+    overflow:hidden;
+    transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+    z-index: -99;
+/*    clip: rect(100px, 0px, 00px, 0px);*/
+}
+
+
+.b_up{
+	position:fixed;
+	top:5px;
+	left:50%;
+	transform: translate(-50%, 0);
+        -webkit-transform: translate(-50%, 0);
+        -moz-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+        -o-transform: translate(-50%, 0);
+    z-index: 99;
+}
+
+
+.b_down{
+	position:fixed;
+	bottom:5px;
+	left:50%;
+	transform: translate(-50%, 0);
+        -webkit-transform: translate(-50%, 0);
+        -moz-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+        -o-transform: translate(-50%, 0);
+    z-index: 99;
+}
+
+
+.scroll{
+	position:fixed;
+    font-size:16px;
+    background-color:#efefef;
+	color:black;
+	bottom:40px;
+	left:50%;
+	border:solid #861719 2px;
+	border-radius: 10px;
+	padding: 5px;
+	transform: translate(-50%, 0);
+        -webkit-transform: translate(-50%, 0);
+        -moz-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+        -o-transform: translate(-50%, 0);
+    z-index: 99;
+}
+
+/*
+.red-line{
+	position:fixed;
+	bottom:-38px;
+	left:50%;
+	transform: translate(-50%, 0);
+        -webkit-transform: translate(-50%, 0);
+        -moz-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+        -o-transform: translate(-50%, 0);
+}
+*/
+
+.row{
+    position:relative;
+    height:100vh;
+    padding:0px;
+    margin: 0px;
+    
+    
+    
+}
+
+.intro{
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+    z-index:2;
+}
+
+
+.line_02{
+    position:absolute;
+    left:50%;
+    top:50%;
+    height:100vh;!important
+/*    width:100vw;*/
+/*    width:100vw;*/
+    overflow:hidden;
+    transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+    z-index: -99;
+    
+    
+}
+
+.teaser{
+    z-index: 199;
+
+}
