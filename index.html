@@ -5,21 +5,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> The Toxic System | Kidney Battles</title>
+    <title> Transplanted | The Toxic System</title>
+    <link rel="shortcut icon" href="assets/img/icon.ico">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Rokkitt:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
     <script src="js/modernizr.js"></script>
 
-
-
-    <!-- This following line is only necessary in the case of using the plugin option `scrollOverflow:true` -->
-    <!--
-    <script type="text/javascript" src="vendors/jquery.slimscroll.min.js"></script>
-
-    <script type="text/javascript" src="jquery.fullPage.js"></script>
--->
 
     <link rel="canonical" href="">
     <meta property="fb:app_id" content="" />
@@ -54,7 +47,56 @@
     <h3 class="scroll"> SCROLL </h3>
     <img class="b_down" id="b_down" src="assets/img/b_down_1.png" width="40" height="40">
 
+    
+    
+     <nav id="cd-vertical-nav">
+        <ul>
+            <li>
+                <a href="#section1" data-number="1">
+                    <span class="cd-dot"></span>
+                    <span class="cd-label">Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="#section2" data-number="2">
+                    <span class="cd-dot"></span>
+                    <span class="cd-label">Intro</span>
+                </a>
+            </li>
+            <li>
+                <a href="#section3" data-number="3">
+                    <span class="cd-dot"></span>
+                    <span class="cd-label">Chapter I</span>
+                </a>
+            </li>
+            <li>
+                <a href="#section4" data-number="4">
+                    <span class="cd-dot"></span>
+                    <span class="cd-label">Chapter II</span>
+                </a>
+            </li>
+            <li>
+                <a href="#section5" data-number="5">
+                    <span class="cd-dot"></span>
+                    <span class="cd-label">Chapter III</span>
+                </a>
+            </li>
+            <li>
+                <a href="#section6" data-number="6">
+                    <span class="cd-dot"></span>
+                    <span class="cd-label">Chapter IV</span>
+                </a>
+            </li>
+            <li>
+                <a href="#section7" data-number="7">
+                    <span class="cd-dot"></span>
+                    <span class="cd-label">Chapter V</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
 
+    <!--    end of navigation bar-->
 
     <div id="fullpage">
 
@@ -63,7 +105,7 @@
         <div class="landing_page section active" id="landing_page">
             <h5 class="language">English | <a href="" class="spanish">Español</a></h5>
             <div class="title">
-                <img class="img-responsive" src="assets/img/moving_title.gif">
+                <img class="img-responsive" src="assets/img/moving_title_01.gif">
 
                 <!--                <button type="button" class="btn btn-info-outline spanish">Español</button>-->
                 <img class="line" class="img-responsive" src="assets/img/line.svg">
@@ -71,7 +113,7 @@
         </div>
 
         <!--intro page-->
-        <div class="row section" id="intro_page">
+        <div class="full row section" id="intro_page">
 
             <img class="img-responsive" data-0="transform:translate3d(-100%,0px,0px)" data-bottom="transform:translate3d(-100%,0px,0px)" data-center="transform:translate3d(20px,0px,0px)" data-top-bottom="transform:translate3d(-100%,0px,0px)" id="pillbox1" src="assets/img/pillbox.svg">
 
@@ -82,65 +124,89 @@
 
             </div>
             <!--            <img class="line_01" class="" src="assets/img/line_01.svg">-->
-            <img class="line_02" class="" src="assets/img/line_02.svg">
+            <img class="line_all" class="" src="assets/img/line_01.svg">
 
 
         </div>
-        
-        
-        <div class="row section">
+
+
+        <div class="full row section">
 
             <div class="teaser embed-responsive embed-responsive-16by9">
                 <iframe src="https://player.vimeo.com/video/162765458" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             </div>
-            <img class="line_02" class="" src="assets/img/line_02.svg">
+            <img class="line_all" class="" src="assets/img/line_01.svg">
 
 
         </div>
 
 
 
-        <div class="row section">
+        <div class="full row section">
 
-<!--            <div class="intro" data-0="opacity:0" data--100-bottom="opacity:0" data-center="opacity:1" data-top-bottom="opacity:0">-->
-            
-<!--        <img class="img-responsive" data-0="transform:translate3d(200%,0px,0px)" data-bottom-top="transform:translate3d(200%,0px,0px)" data-bottom="transform:translate3d(100%,0px,0px)" data-top-bottom="transform:translate3d(200%,0px,0px)" id="pillbox2" src="assets/img/pillbox2.svg">-->
+            <!--            <div class="intro" data-0="opacity:0" data--100-bottom="opacity:0" data-center="opacity:1" data-top-bottom="opacity:0">-->
 
-             <div class="intro">
-                <h3>America’s 11.3 million undocumented immigrants -- more so than any other group in the country -- struggle with health disparities. They don’t qualify for federal programs like Medicare; Their jobs don’t carry benefits; And years without primary care often lead to chronic illness. Emergency rooms are their only doctors. </h3>
+            <!--        <img class="img-responsive" data-0="transform:translate3d(200%,0px,0px)" data-bottom-top="transform:translate3d(200%,0px,0px)" data-bottom="transform:translate3d(100%,0px,0px)" data-top-bottom="transform:translate3d(200%,0px,0px)" id="pillbox2" src="assets/img/pillbox2.svg">-->
+
+            <div class="intro" id="intro1">
+                <h3 class="intro_text">America’s 11.3 million undocumented immigrants -- more so than any other group in the country -- struggle with health disparities. They don’t qualify for federal programs like Medicare; Their jobs don’t carry benefits; And years without primary care often lead to chronic illness. Emergency rooms are their only doctors. </h3>
             </div>
             <img class="img-responsive" data-0="right:-200%" data-bottom-top="-right:-200%" data-bottom="right:0px" data-top-bottom="right:-200%" id="pillbox2" src="assets/img/pillbox2.svg">
-             <img class="line_02" class="" src="assets/img/line_02.svg">
+            <img class="line_all" class="" src="assets/img/line_03.svg">
 
 
         </div>
-        
-        
-        <div class="row section">
 
-            <div class="intro">
-                <h3>Life-saving operations, like organ transplants, often fall out of reach for the undocumented; not because of their immigration status, but because of their wallet. They can’t pay. End-stage kidney disease, treatable with a transplant, is an especially slow and painful killer for 6,480 undocumented every year living on dialysis. Most can’t afford to get on the transplant list or even receive a kidney from a living donor.  </h3>
+
+        <div class="full row section">
+
+            <div class="intro" id="intro2">
+                <h3 class="intro_text">Life-saving operations, like organ transplants, often fall out of reach for the undocumented; not because of their immigration status, but because of their wallet. They can’t pay. End-stage kidney disease, treatable with a transplant, is an especially slow and painful killer for 6,480 undocumented every year living on dialysis. Most can’t afford to get on the transplant list or even receive a kidney from a living donor.  </h3>
             </div>
 
-             <img class="line_02" class="" src="assets/img/line_02.svg">
+            <img class="line_all" class="" src="assets/img/line_04.svg">
 
 
         </div>
 
 
-        <div class="row section">
 
-            <div class="intro">
-                <h3>This is the story of how five men -- connected by turns of fate, stomping feet, and profound acts of charity -- have worked around the kidney transplant system to save one another from slipping through the cracks. </h3>
+        <div class="full row section">
+
+            <div id="portraits" data-0="left:-100%; top:35%" data-bottom-top="left:-100%; top:35%" data-35p-top-bottom="left:50%" data-top-bottom="top:0%">
+                <img class="img-responsive" id="osvaldo" src="assets/img/Osvaldo.png">
+                <img class="img-responsive" id="jesus" src="assets/img/Jesus.png">
+                <img class="img-responsive" id="donald" src="assets/img/Donald.png">
+                <img class="img-responsive" id="hugo" src="assets/img/Hugo.png">
+                <img class="img-responsive" id="irvin" src="assets/img/Irvin.png">
+            </div>
+            <div class="intro" id="intro3">
+                <h3 class="intro_text">This is the story of how five men -- connected by turns of fate, stomping feet, and profound acts of charity -- have worked around the kidney transplant system to save one another from slipping through the cracks. </h3>
             </div>
 
-             <img class="line_02" class="" src="assets/img/line_02.svg">
+            <img class="line_all" class="" src="assets/img/line_05.svg">
 
 
         </div>
 
+        <div class="row section">
+            <div class="col-sm-2" class="spacer"></div>
 
-        
+            <div class="col-sm-8" id="">
+                <p class="chapter1"><strong>Friends don’t ask friends for vital organs.</strong> But in 2010, Donald Kagan needed one -- and time was running out. The small cysts in his belly had finally begun to incapacitate both his left and right kidney; what had started as one tiny stone a decade earlier. It had since developed into terminal renal failure. So he wrote letters to two friends, asking for a favor he could never return. “It was the one of the most difficult things,” said Kagan, 50.</p>
+
+                <p>The first reply was a sincere rejection: high blood pressure. The second never came. </p>
+
+<p>He had liked living in Nicaragua, in his peaceful home, a northern city called Estelí. It’s where he met his wife, where he worked, volunteered and where he had made life-long friends. But he moved back stateside San Ramon, where he could buy a little more time while on dialysis. </p>
+
+            </div>
+             <div class="col-sm-2" class="spacer"></div>
+
+        </div>
+
+
+
+
 
 
 
