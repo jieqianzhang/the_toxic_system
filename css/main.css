@@ -10,6 +10,10 @@ body {
     z-index: 9;
 }
 
+.slimScrollBar {
+    width: 0px !important;
+}
+
 
 /*
 header{
@@ -33,7 +37,8 @@ header{
 }
 
 #pillbox1,
-#pillbox2 {
+#pillbox2,
+#scissors {
     position: absolute;
     z-index: 199;
 }
@@ -90,9 +95,6 @@ header{
     transition: all .1s linear;
 }
 
-
-
-
 .language {
     position: absolute;
     top: 10px;
@@ -103,7 +105,7 @@ header{
 .spanish {
     text-decoration: none;
     color: darkgrey;
-    font-size:16px;
+    font-size: 16px;
 }
 
 a.spanish:hover {
@@ -157,67 +159,6 @@ a.spanish:hover {
     -o-transform: translate(-50%, -50%);
 }
 
-@media only screen and (max-width:768px) {
-    .title {
-        width: 100%;
-    }
-    .intro {
-        width: 90%;
-    }
-    #pillbox1 {
-        width: 60%;
-        top: 0;
-    }
-    #pillbox2 {
-        width: 50%;
-        bottom: 0px;
-    }
-    #donald,
-    #osvaldo,
-    #jesus,
-    #hugo,
-    #irvin {
-        width: 12%;
-    }
-    .intro_text {
-        font-size: 18px;
-        padding-left:20px;
-        padding-right:20px;
-    }
-    #intro3 {
-        position: absolute;
-        top: 50%;
-    }
-}
-
-@media only screen and (min-width:769px) {
-    .title {
-        width: 50%;
-    }
-    #pillbox1 {
-        width: 30%;
-        top: 30%;
-    }
-    #pillbox2 {
-        width: 30%;
-        bottom: 0px;
-    }
-    .teaser {
-        height: 50%;
-    }
-    #donald,
-    #osvaldo,
-    #jesus,
-    #hugo,
-    #irvin {
-        width: 12%;
-    }
-    #intro3 {
-        position: absolute;
-        top: 55% !important;
-    }
-}
-
 .title {
     position: absolute;
     left: 50%;
@@ -229,8 +170,6 @@ a.spanish:hover {
     -o-transform: translate(-50%, -50%);
     z-index: 1;
 }
-
-
 
 .line {
     position: absolute;
@@ -328,8 +267,237 @@ a.spanish:hover {
     z-index: 199;
 }
 
+.section1_opening {
+    font-size: 36px
+}
 
-/*navigation side bar*/
+.section1,
+.section2,
+.section3,
+.section4,
+.section5 p {
+    padding-top: 20px;
+}
+
+.section1_illustration {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+
+.section2_illustration {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+
+.section4_illustration {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+}
+
+.section5_illustration {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+}
+
+.chapter_title {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+.chapter_title h1,
+h4 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+}
+
+.black_line {
+    background-color: #424241;
+    width: 20px;
+    height: 3px;
+    border-radius: 5px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+.firstcharacter {
+    float: left;
+    color: #903;
+    font-size: 80px;
+    line-height: 60px;
+    padding-top: 4px;
+    padding-right: 8px;
+    padding-left: 3px;
+}
+
+
+/**************************beginning of media query**********************/
+
+
+/********desktop********/
+
+@media only screen and (min-width:769px) {
+    .title {
+        width: 50%;
+    }
+    #pillbox1 {
+        width: 30%;
+        top: 30%;
+    }
+    #pillbox2 {
+        width: 30%;
+        bottom: 0px;
+    }
+    #scissors {
+        width: 35%;
+        bottom: 0px;
+    }
+    .teaser {
+        height: 50%;
+    }
+    #donald,
+    #osvaldo,
+    #jesus,
+    #hugo,
+    #irvin {
+        width: 12%;
+    }
+    #intro3 {
+        position: absolute;
+        top: 55% !important;
+    }
+    .section1,
+    .section2,
+    .section3,
+    .section4,
+    .section5 {
+        font-size: 18px;
+        padding-left: 25%;
+        padding-right: 25%;
+    }
+    .section1,
+    .section2,
+    .section3,
+    .section4,
+    .section5 {
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+    .section1_illustration {
+        width: 60%;
+    }
+    .section5_illustration,
+    .section4_illustration,
+    .section2_illustration {
+        width: 40%;
+    }
+    .chapter_title h1 {
+        font-size: 48px;
+    }
+    .chapter_title h4 {
+        font-size: 20px;
+    }
+    .video_wrapper {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+}
+
+
+/********mobile********/
+
+@media only screen and (max-width:768px) {
+    .title {
+        width: 100%;
+    }
+    .intro {
+        width: 90%;
+    }
+    #pillbox1 {
+        width: 60%;
+        top: 0;
+    }
+    #pillbox2 {
+        width: 50%;
+        bottom: 0px;
+    }
+    #scissors {
+        width: 35%;
+        bottom: 0px;
+    }
+    #donald,
+    #osvaldo,
+    #jesus,
+    #hugo,
+    #irvin {
+        width: 12%;
+    }
+    .intro_text {
+        font-size: 18px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    #intro3 {
+        position: absolute;
+        top: 50%;
+    }
+    .section1,
+    .section2,
+    .section3,
+    .section4,
+    .section5 {
+        margin-left: 30px;
+        font-size: 16px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .section1_illustration,
+    .section2_illustration,
+    .section4_illustration,
+    {
+        width: 90%;
+    }
+    .section5_illustration {
+        width: 90%;
+    }
+    .section2_illustration {
+        width: 80%;
+    }
+    .chapter_title h1 {
+        font-size: 36px;
+    }
+    .chapter_title h4 {
+        font-size: 20px;
+    }
+    .video_wrapper {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+
+/**************************end of media query**********************/
+
+
+/**************************navigation side bar*********************/
+
 span,
 a,
 ol,
@@ -339,10 +507,6 @@ nav {
     margin: 0;
     padding: 0;
     border: 0;
-/*
-    font: inherit;
-    vertical-align: baseline;
-*/
 }
 
 ol,
@@ -369,18 +533,9 @@ ul {
 
 #cd-vertical-nav a {
     display: inline-block;
-    /* prevent weird movements on hover when you use a CSS3 transformation - webkit browsers */
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }
-
-/*
-#cd-vertical-nav a:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-*/
 
 #cd-vertical-nav a span {
     float: left;
@@ -402,27 +557,16 @@ ul {
 
 #cd-vertical-nav a:hover .cd-label {
     opacity: 1;
-/*
-    -webkit-transform: translateY(25%);
-    -moz-transform: translateY(25%);
-    -ms-transform: translateY(25%);
-    -o-transform: translateY(25%);
-    transform: translateY(25%);
-   
-*/
-    
 }
-
 
 #cd-vertical-nav .cd-dot {
     position: relative;
-    /* we set a top value in order to align the dot with the label. If you change label's font, you may need to change this top value*/
     top: 3px;
     height: 12px;
     width: 12px;
     border-radius: 50%;
     border: solid 1px dimgrey;
-    background-color:white;
+    background-color: white;
     -webkit-transition: -webkit-transform 0.2s, background-color 0.5s;
     -moz-transition: -moz-transform 0.2s, background-color 0.5s;
     transition: transform 0.2s, background-color 0.5s;
@@ -433,10 +577,8 @@ ul {
     transform-origin: 50% 50%;
 }
 
-
 #cd-vertical-nav a:hover .cd-dot {
-   
-    background-color:dimgrey;
+    background-color: dimgrey;
     border: solid 1px dimgrey;
     -webkit-transition: -webkit-transform 0.2s, background-color 0.5s;
     -moz-transition: -moz-transform 0.2s, background-color 0.5s;
@@ -448,8 +590,8 @@ ul {
     margin-left: 5px;
     padding: .1em .1em;
     color: dimgrey;
-    font-size: 12px; !important
-    font-size: 0.875rem;
+    font-size: 12px;
+    !important font-size: 0.875rem;
     -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
     -moz-transition: -moz-transform 0.2s, opacity 0.2s;
     transition: transform 0.2s, opacity 0.2s;
@@ -460,3 +602,9 @@ ul {
     -o-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
 }
+
+
+/*
+
+end of the navigation bar
+*/
