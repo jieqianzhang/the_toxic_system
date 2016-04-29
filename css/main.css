@@ -1,6 +1,6 @@
 body {
     font-family: 'Rokkitt', serif;
-    overflow: hidden !important;
+    overflow-x: hidden !important;
 }
 
 .landing_page {
@@ -289,6 +289,12 @@ a.spanish:hover {
     position: absolute;
     right: 0px;
     bottom: 0px;
+    left: 60%;
+    transform: translate(-50%, 0%);
+    -webkit-transform: translate(-50%, 0%);
+    -moz-transform: translate(-50%, 0%);
+    -ms-transform: translate(-50%, 0%);
+    -o-transform: translate(-50%, 0%);
 }
 
 .section4_illustration {
@@ -395,16 +401,18 @@ h4 {
     .section3,
     .section4,
     .section5 {
-        padding-top: 5%;
-        padding-bottom: 5%;
+        padding-top: 10%;
+        padding-bottom: 10%;
     }
     .section1_illustration {
         width: 60%;
     }
     .section5_illustration,
-    .section4_illustration,
     .section2_illustration {
         width: 40%;
+    }
+    .section4_illustration {
+        width: 60%;
     }
     .chapter_title h1 {
         font-size: 48px;
@@ -412,9 +420,48 @@ h4 {
     .chapter_title h4 {
         font-size: 20px;
     }
-    .video_wrapper {
+    blockquote {
+        width: 60%;
+    }
+    /******************* video sizing *************/
+    .video_wrapper_big {
         margin-top: 60px;
         margin-bottom: 60px;
+    }
+    .donald_quote {
+        width: 320px;
+        height: 180px;
+        float: right;
+        margin-left: 20px;
+    }
+    .osvaldo_video_small {
+        width: 320px;
+        height: 180px;
+        float: left;
+        margin-right: 20px;
+    }
+    .jesus_video_small {
+        width: 320px;
+        height: 180px;
+        float: left;
+        margin-right: 20px;
+    }
+    .hugo_video_1,
+    .hugo_video_3,
+    .irvin_video_1,
+    .irvin_video_3 {
+        width: 320px;
+        height: 180px;
+        float: left;
+        margin-right: 20px;
+    }
+    .hugo_video_2,
+    .hugo_video_4,
+    .irvin_video_2 {
+        width: 320px;
+        height: 180px;
+        float: right;
+        margin-left: 20px;
     }
 }
 
@@ -486,9 +533,48 @@ h4 {
     .chapter_title h4 {
         font-size: 20px;
     }
-    .video_wrapper {
+    blockquote {
+        width: 100%;
+    }
+    /******************* video sizing *************/
+    .video_wrapper_big {
         margin-top: 20px;
         margin-bottom: 20px;
+    }
+    .donald_quote {
+        width: 320px;
+        height: 180px;
+        float: right;
+        margin-left: 20px;
+    }
+    .osvaldo_video_small {
+        width: 320px;
+        height: 180px;
+        float: left;
+        margin-right: 20px;
+    }
+    .jesus_video_small {
+        width: 320px;
+        height: 180px;
+        float: left;
+        margin-right: 20px;
+    }
+    .hugo_video_1,
+    .hugo_video_3,
+    .irvin_video_1,
+    .irvin_video_3 {
+        width: 320px;
+        height: 180px;
+        float: left;
+        margin-right: 20px;
+    }
+    .hugo_video_2,
+    .hugo_video_4,
+    .irvin_video_2 {
+        width: 320px;
+        height: 180px;
+        float: right;
+        margin-left: 20px;
     }
 }
 
@@ -566,7 +652,7 @@ ul {
     width: 12px;
     border-radius: 50%;
     border: solid 1px dimgrey;
-    background-color: white;
+    background-color: dimgrey;
     -webkit-transition: -webkit-transform 0.2s, background-color 0.5s;
     -moz-transition: -moz-transform 0.2s, background-color 0.5s;
     transition: transform 0.2s, background-color 0.5s;
@@ -578,8 +664,8 @@ ul {
 }
 
 #cd-vertical-nav a:hover .cd-dot {
-    background-color: dimgrey;
     border: solid 1px dimgrey;
+    background-color: white;
     -webkit-transition: -webkit-transform 0.2s, background-color 0.5s;
     -moz-transition: -moz-transform 0.2s, background-color 0.5s;
     transition: transform 0.2s, background-color 0.5s;
@@ -608,3 +694,64 @@ ul {
 
 end of the navigation bar
 */
+
+
+/*block quotes*/
+
+blockquote {
+    display: block;
+    background: #fff;
+    padding: 15px 20px 15px 45px;
+    margin: 0 0 20px;
+    position: relative;
+    /*Font*/
+    font-size: 20px;
+    line-height: 1.2;
+    color: #666;
+    text-align: justify;
+    float: left;
+    margin-right: 20px;
+    /*Borders - (Optional)*/
+    border-left: 10px solid darkred;
+    /*    border-right: 2px solid darkred;*/
+    /*Box Shadow - (Optional)*/
+    /*    -moz-box-shadow: 2px 2px 15px #ccc;*/
+    /*
+    -webkit-box-shadow: 2px 2px 15px #ccc;
+    box-shadow: 2px 2px 15px #ccc;
+*/
+}
+
+blockquote::before {
+    content: "\201C";
+    /*Unicode for Left Double Quote*/
+    /*Font*/
+    font-size: 60px;
+    font-weight: bold;
+    color: #999;
+    /*Positioning*/
+    position: absolute;
+    left: 10px;
+    top: 5px;
+}
+
+blockquote::after {
+    /*Reset to make sure*/
+    content: "";
+}
+
+blockquote a {
+    text-decoration: none;
+    background: #eee;
+    cursor: pointer;
+    padding: 0 3px;
+    color: darkred;
+}
+
+blockquote a:hover {
+    color: #666;
+}
+
+blockquote em {
+    font-style: italic;
+}
