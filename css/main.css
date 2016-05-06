@@ -356,6 +356,12 @@ h4 {
     padding-left: 3px;
 }
 
+#quote_2 {
+    border-left: none;
+    border-right: 10px solid darkred;
+    float: right;
+}
+
 
 /**************************beginning of media query**********************/
 
@@ -418,10 +424,8 @@ h4 {
     .section4_illustration {
         width: 60%;
     }
-
-    .section5_illustration{
-        width:20%;
-
+    .section5_illustration {
+        width: 20%;
     }
     .chapter_title h1 {
         font-size: 48px;
@@ -531,7 +535,7 @@ h4 {
         width: 90%;
     }
     .section5_illustration {
-        width:50%;
+        width: 50%;
     }
     .section2_illustration {
         width: 80%;
@@ -747,18 +751,6 @@ blockquote::before {
 blockquote::after {
     /*Reset to make sure*/
     content: "";
-}
-
-blockquote a {
-    text-decoration: none;
-    background: #eee;
-    cursor: pointer;
-    padding: 0 3px;
-    color: darkred;
-}
-
-blockquote a:hover {
-    color: #666;
 }
 
 blockquote em {
