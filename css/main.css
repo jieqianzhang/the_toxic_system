@@ -305,8 +305,13 @@ a.spanish:hover {
 
 .section5_illustration {
     position: absolute;
-    left: 0px;
     bottom: 0px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    -webkit-transform: translate(-50%, 0%);
+    -moz-transform: translate(-50%, 0%);
+    -ms-transform: translate(-50%, 0%);
+    -o-transform: translate(-50%, 0%);
 }
 
 .chapter_title {
@@ -407,12 +412,16 @@ h4 {
     .section1_illustration {
         width: 60%;
     }
-    .section5_illustration,
     .section2_illustration {
         width: 40%;
     }
     .section4_illustration {
         width: 60%;
+    }
+
+    .section5_illustration{
+        width:20%;
+
     }
     .chapter_title h1 {
         font-size: 48px;
@@ -522,7 +531,7 @@ h4 {
         width: 90%;
     }
     .section5_illustration {
-        width: 90%;
+        width:50%;
     }
     .section2_illustration {
         width: 80%;

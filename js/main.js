@@ -10,6 +10,8 @@ if (isChrome) {
     $("#videoId").replaceWith($('<video id="videoId" width="100%" autoplay loop><source src="video.webm" type="video/webm"></video>'));
 }
 
+
+
 $("#menu_home").click(function () {
     $('html, body').animate({
         scrollTop: $("#landing_page").offset().top
@@ -55,8 +57,34 @@ $("#menu_section5").click(function () {
 });
 
 
-$("#osvaldo").click(function () {
+$("#donald").click(function () {
     $('html, body').animate({
         scrollTop: $("#section1_div").offset().top
     }, 600);
 });
+
+$("#osvaldo").click(function () {
+    $('html, body').animate({
+        scrollTop: $("#section2_div").offset().top
+    }, 600);
+});
+
+$("#jesus").click(function () {
+    $('html, body').animate({
+        scrollTop: $("#section3_div").offset().top
+    }, 600);
+});
+
+
+$("#hugo").click(function () {
+    $('html, body').animate({
+        scrollTop: $("#section4_div").offset().top
+    }, 600);
+});
+
+$("#irvin").click(function () {
+    $('html, body').animate({
+        scrollTop: $("#section5_div").offset().top
+    }, 600);
+});
+
