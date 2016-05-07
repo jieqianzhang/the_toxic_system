@@ -297,6 +297,12 @@ a.spanish:hover {
     position: absolute;
     right: 0px;
     bottom: 0px;
+}
+
+.section3_illustration {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
     left: 60%;
     transform: translate(-50%, 0%);
     -webkit-transform: translate(-50%, 0%);
@@ -384,7 +390,8 @@ h4 {
     color: grey;
     line-height: 12px;
     padding-top: 20px;
-    padding-bottom: 20px;}
+    padding-bottom: 20px;
+}
 
 #byline p {
     margin-left: 0px;
@@ -447,6 +454,9 @@ h4 {
         width: 60%;
     }
     .section2_illustration {
+        width: 70%;
+    }
+    .section3_illustration {
         width: 40%;
     }
     .section4_illustration {
@@ -560,7 +570,7 @@ h4 {
         padding-right: 30px;
     }
     .section1_illustration,
-    .section2_illustration,
+    .section3_illustration,
     .section4_illustration,
     {
         width: 90%;
@@ -568,7 +578,7 @@ h4 {
     .section5_illustration {
         width: 50%;
     }
-    .section2_illustration {
+    .section3_illustration {
         width: 80%;
     }
     .chapter_title h1 {
