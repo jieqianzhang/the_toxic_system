@@ -291,12 +291,14 @@ a.spanish:hover {
     position: absolute;
     right: 0px;
     bottom: 0px;
+    z-index: 999999;
 }
 
 .section2_illustration {
     position: absolute;
     right: 0px;
     bottom: 0px;
+    z-index: 999999;
 }
 
 .section3_illustration {
@@ -309,12 +311,14 @@ a.spanish:hover {
     -moz-transform: translate(-50%, 0%);
     -ms-transform: translate(-50%, 0%);
     -o-transform: translate(-50%, 0%);
+    z-index: 999999;
 }
 
 .section4_illustration {
     position: absolute;
     left: 0px;
     bottom: 0px;
+    z-index: 999999;
 }
 
 .section5_illustration {
@@ -326,6 +330,7 @@ a.spanish:hover {
     -moz-transform: translate(-50%, 0%);
     -ms-transform: translate(-50%, 0%);
     -o-transform: translate(-50%, 0%);
+    z-index: 999999;
 }
 
 .chapter_title {
@@ -338,6 +343,7 @@ a.spanish:hover {
     -moz-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
+    background-color: #efefef;
 }
 
 .chapter_title h1,
@@ -397,6 +403,23 @@ h4 {
     margin-left: 0px;
 }
 
+.line_chapter_top {
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    -webkit-transform: translate(-50%, 0%);
+    -moz-transform: translate(-50%, 0%);
+    -ms-transform: translate(-50%, 0%);
+    -o-transform: translate(-50%, 0%);
+}
+
+.line_chapter_bottom {
+    position: absolute;
+    bottom: 0px;
+}
+
 
 /**************************beginning of media query**********************/
 
@@ -448,7 +471,7 @@ h4 {
     .section4,
     .section5 {
         padding-top: 10%;
-        padding-bottom: 10%;
+        padding-bottom: 10px;
     }
     .section1_illustration {
         width: 60%;
