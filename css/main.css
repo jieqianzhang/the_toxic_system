@@ -266,14 +266,6 @@ a.spanish:hover {
     font-size: 36px
 }
 
-.section1,
-.section2,
-.section3,
-.section4,
-.section5 p {
-    padding-top: 20px;
-}
-
 .section1_illustration {
     position: absolute;
     right: 0px;
@@ -327,7 +319,7 @@ a.spanish:hover {
     -moz-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
-    background-color: #efefef;
+    /*    background-color: #efefef;*/
 }
 
 .chapter_title h1,
@@ -376,11 +368,12 @@ h4 {
     -ms-transform: translate(-50%, 0%);
     -o-transform: translate(-50%, 0%);
 */
-    border-top: solid 1px grey;
+    /*    border-top: solid 1px grey;*/
     color: grey;
     line-height: 12px;
     padding-top: 20px;
     padding-bottom: 20px;
+    text-align: center;
 }
 
 #byline p {
@@ -419,8 +412,7 @@ h4 {
 }
 
 a:link.source {
-    color: black;
-    background-color: lightgrey;
+    color: darkred;
 }
 
 a:hover.source {
@@ -429,7 +421,11 @@ a:hover.source {
 
 a:visited.source {
     text-decoration: none;
-    color: black;
+    color: darkred;
+}
+
+.thanks {
+    padding-top: 10px
 }
 
 
@@ -493,6 +489,7 @@ a:visited.source {
     }
     .section3_illustration {
         width: 40%;
+        right: 20%;
     }
     .section4_illustration {
         width: 60%;
