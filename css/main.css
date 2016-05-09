@@ -190,19 +190,6 @@ a.spanish:hover {
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
     z-index: -99;
-    /*    clip: rect(100px, 0px, 00px, 0px);*/
-}
-
-.b_up {
-    position: fixed;
-    top: 5px;
-    left: 50%;
-    transform: translate(-50%, 0);
-    -webkit-transform: translate(-50%, 0);
-    -moz-transform: translate(-50%, 0);
-    -ms-transform: translate(-50%, 0);
-    -o-transform: translate(-50%, 0);
-    z-index: 99;
 }
 
 .b_down {
@@ -291,34 +278,32 @@ a.spanish:hover {
     position: absolute;
     right: 0px;
     bottom: 0px;
-    z-index: 999999;
 }
 
 .section2_illustration {
     position: absolute;
     right: 0px;
     bottom: 0px;
-    z-index: 999999;
 }
 
 .section3_illustration {
     position: absolute;
     right: 0px;
     bottom: 0px;
-    left: 60%;
+    /*    left: 60%;*/
+    /*
     transform: translate(-50%, 0%);
-    -webkit-transform: translate(-50%, 0%);
-    -moz-transform: translate(-50%, 0%);
-    -ms-transform: translate(-50%, 0%);
-    -o-transform: translate(-50%, 0%);
-    z-index: 999999;
+ -webkit-transform: translate(-50%, 0%);
+ -moz-transform: translate(-50%, 0%);
+ -ms-transform: translate(-50%, 0%);
+ -o-transform: translate(-50%, 0%);
+*/
 }
 
 .section4_illustration {
     position: absolute;
     left: 0px;
     bottom: 0px;
-    z-index: 999999;
 }
 
 .section5_illustration {
@@ -330,7 +315,6 @@ a.spanish:hover {
     -moz-transform: translate(-50%, 0%);
     -ms-transform: translate(-50%, 0%);
     -o-transform: translate(-50%, 0%);
-    z-index: 999999;
 }
 
 .chapter_title {
@@ -403,6 +387,10 @@ h4 {
     margin-left: 0px;
 }
 
+#byline {
+    margin-top: 40px;
+}
+
 .line_chapter_top {
     position: absolute;
     top: 0px;
@@ -418,6 +406,30 @@ h4 {
 .line_chapter_bottom {
     position: absolute;
     bottom: 0px;
+}
+
+.play_button {
+    width: 150px;
+    position: absolute;
+    left: 60px;
+}
+
+.highlight {
+    background-color: #fddddd;
+}
+
+a:link.source {
+    color: black;
+    background-color: lightgrey;
+}
+
+a:hover.source {
+    text-decoration: none;
+}
+
+a:visited.source {
+    text-decoration: none;
+    color: black;
 }
 
 
@@ -454,7 +466,7 @@ h4 {
     }
     #intro3 {
         position: absolute;
-        top: 55% !important;
+        top: 60% !important;
     }
     .section1,
     .section2,
@@ -531,14 +543,17 @@ h4 {
         height: 180px;
         float: left;
         margin-right: 20px;
+        position: relative;
     }
     .hugo_video_2,
     .hugo_video_4,
-    .irvin_video_2 {
+    .irvin_video_2,
+    .jesus_video_1 {
         width: 320px;
         height: 180px;
         float: right;
         margin-left: 20px;
+        position: relative;
     }
 }
 
@@ -650,7 +665,8 @@ h4 {
     }
     .hugo_video_2,
     .hugo_video_4,
-    .irvin_video_2 {
+    .irvin_video_2,
+    .jesus_video_1 {
         width: 320px;
         height: 180px;
         float: right;
