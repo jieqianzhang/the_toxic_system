@@ -88,3 +88,19 @@ $("#irvin").click(function () {
     }, 600);
 });
 
+
+$(window).bind('scroll', function () {
+    if ($(window).scrollTop() > document.documentElement.clientHeight) {
+        $('#b_down').hide();
+    } else {
+        $('#b_down').show();
+    }
+});
+
+$(window).bind('scroll', function () {
+    if ($(window).scrollTop() > document.documentElement.clientHeight) {
+        $('#scroll').hide();
+    } else {
+        $('#scroll').show();
+    }
+});
